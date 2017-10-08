@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+  <link rel="stylesheet" type="text/css" href="../css/home.css">
+  <title>甜品屋</title>
+</head>
+<body>
+  <div id="app">
+  	<article class="home" v-if="currentPage===1">
+      <header>
+      	<div class="title">甜品屋</div>
+      </header>  
+      <div class="content">
+      	<ul class="list">
+      	  <li class="item" v-for="cake in cakeList" @click="detail(cake.cakeId)">
+      	  	<div class="cakeImg">
+      	  		<img :src="cake.cakeImg1" alt="">
+      	  	</div>
+      	  	<div class="cakeName">{{cake.cakeName}}</div>
+      	  	<div class="cakePrice">{{cake.cakePrice | moneyFormat}}</div>
+      	  </li>
+      	</ul>
+      </div>
+      <div class="shopBtn" @click="currentPage=3"></div>
+  	</article>
+
+    <article class="cakeMess" v-if="currentPage===2">
+      <header>
+        <div class="backBtn" @click="currentPage=1">&lt;</div>
+        <div class="title">{{cakeMess.cakeName}}</div>
+      </header>
+      <div class="content">
+        <div class="cakeImgs">
+          <div id="slide1" v-if="imgFlag===1"><img :src="cakeMess.cakeImg1" alt=""></div>
+          <div id="slide2" v-if="imgFlag===2"><img :src="cakeMess.cakeImg2" alt=""></div>
+          <div id="slide3" v-if="imgFlag===3"><img :src="cakeMess.cakeImg3" alt=""></div>
+          <div class="slide">
+            <a href="#slide1" @click="imgFlag=1"><span :class="{'currentSpan':imgFlag===1}"></span></a>
+            <a href="#slide2" @click="imgFlag=2"><span :class="{'currentSpan':imgFlag===2}"></span></a>
+            <a href="#slide3" @click="imgFlag=3"><span :class="{'currentSpan':imgFlag===3}"></span></a>
+          </div>
+        </div>
+        <div class="cakeDesc">
+          <span>名称：{{cakeMess.cakeName}}</span>
+          <span>单价：{{cakeMess.cakePrice | moneyFormat}}</span>
+          <span>描述：{{cakeMess.cakeDesc}}</span>
+        </div>
+        <div class="cartBtn" @click="succIncart">加入购物车</div>
+        <div class="dialog" v-if="dialogFlag" @touchmove.prevent>
+          <div class="header">
+            <div class="quit" @click="dialogFlag = false">X</div>
+          </div>
+          <div class="content">已成功添加到购物车！</div>
+          <div class="choice">
+            <div class="issure" @click="goIncart">查看购物车</div>
+          </div>
+        </div>
+        <div class="shadow" v-if="dialogFlag" @touchmove.prevent></div>
+      </div>
+    </article>
+
+    <article class="cartMess" v-if="currentPage === 3">
+      <header>
+        <div class="continueShop" @click="currentPage=1">再逛逛</div>
+        <div class="title">购物车</div>
+      </header>
+      <div class="cart-wrap">
+        <ul class="cart-item-list">
+          <li v-for="item in cartList">
+            <div class="cart-item-top">
+              <div class="cart-item-check" :class="{'selected':item.checked}" @click="checkit(item)"></div>
+              <div class="cart-item-pic">
+                <img alt="" v-bind:src="item.cakeImg1">
+              </div>
+              <div class="item-name">{{item.cakeName}}</div>
+              <div class="item-price">单价：{{item.cakePrice | moneyFormat}}</div>
+              <div class="cart-item-del" @click="delConfirm(item)"></div>
+            </div>
+            <div class="cart-item-bottom">
+              <div class="cart-item-quentity">
+                <a href="javascript:;" @click="changeMoney(item,-1)">-</a>
+                <input disabled="disabled" type="text" v-model="item.cakeQuantity">
+                <a href="javascript:;" @click="changeMoney(item,1)">+</a>
+              </div>
+              <div class="item-price-total">{{item.cakeQuantity * item.cakePrice | moneyFormat}}</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <footer class="choice-box">
+        <div class="all-check-box" @click="allCheck"><div class="all-check" :class="{'selected':isAllChecked}"></div><span>全选</span></div>
+        <div class="calculate" @click="currentPage=4">结算</div>
+        <div class="total-money">合计：<span>{{totalMoney | moneyFormat}}</span></div>
+      </footer>
+      <div class="dialog" v-if="delItem" @touchmove.prevent>
+        <div class="header">
+          <div class="quit" @click="delItem = false">X</div>
+        </div>
+        <div class="content">你确定要删除吗？</div>
+        <div class="choice">
+          <div class="issure" @click="sure">确定</div>
+          <div class="issure" @click="delItem = false">取消</div>
+        </div>
+      </div>
+      <div class="shadow" v-if="delItem" @touchmove.prevent></div> 
+    </article> 
+
+    <article class="addressMess" v-if="currentPage === 4">
+      <header>
+        <div class="backBtn" @click="currentPage=3">&lt;</div>
+        <div class="title">配送地址</div>
+      </header>
+      <div class="address-wrap">
+        <ul class="list">
+          <li class="item address-item" v-for="(item, index) in addressList" :class="{default: index==currentIndex}">
+            <div>地址：<span>{{item.address}}</span></div>
+            <div>电话：<span>{{item.tel}}</span></div>
+            <div class="default-btn">
+              <span :class="{word: index==currentIndex}" v-if="index==currentIndex">默认</span>
+              <span :class="{word: index==currentIndex}" v-else @click="currentIndex=index">设为默认</span>
+              <span @click="deleteItem(index)">删除</span>
+            </div>
+          </li>
+        </ul>
+        <span class="insertaddr" @click="insertItem=true">添加新地址</span>
+      </div>
+      <div class="dialog dialog-plus" v-if="insertItem">
+        <div class="header">
+          <div class="quit" @click="insertItem=false">X</div>
+        </div>
+        <div class="content">
+          <form class="fill">
+            <div>
+              <label>地址：</label>
+              <input type="text" name=address"" v-model="newaddr" placeholder="输入配送地址" autofocus="true" />
+            </div>
+            <div>
+              <label>电话：</label>
+              <input type="text" name="tel" v-model="newtel" placeholder="输入联系电话">
+            </div>
+          </form>
+        </div>
+        <div class="choice">
+          <div class="issure submit" @click="submit">提交</div>
+          <div class="issure submit" @click="insertItem=false">取消</div>
+        </div>
+      </div>
+      <div class="shadow" v-if="insertItem"></div>
+      <div class="dialog" v-if="delItem">
+        <div class="header">
+          <div class="quit" @click="delItem=false">X</div>
+        </div>
+        <div class="content">你确定要删除吗？</div>
+        <div class="choice">
+          <div class="issure" @click="sureIt">确定</div>
+          <div class="issure" @click="delItem=false">取消</div>
+        </div>
+      </div>
+      <div class="shadow" v-if="delItem"></div>
+    </article>
+  </div>
+
+  <script type="text/javascript" src="https://unpkg.com/vue"></script>
+  <script src="https://cdn.bootcss.com/vue-resource/1.3.4/vue-resource.min.js"></script>
+  <script type="text/javascript" src="../js/home.js"></script>
+  <script type="text/javascript">
+    (function() {
+      var reSize = _.debounce(function() {
+        var deviceWidth = document.documentElement.clientWidth > 1300 ? 1300 : document.documentElement.clientWidth;
+        document.documentElement.style.fontSize = (deviceWidth / 40) + 'px';
+      }, 50);
+      window.onresize = reSize;
+    })();
+  </script>
+</body>
+</html>

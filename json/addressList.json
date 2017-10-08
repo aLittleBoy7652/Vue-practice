@@ -1,0 +1,18 @@
+{
+  "status": 1,
+  "message": "",
+  "result": {
+  	"list": [
+  	  {
+  	    "address": "西安市长安区西安邮电大学",
+  	  	"tel": "15091671311",
+  	  	"default": true	
+  	  },
+  	  {
+  	  	"address": "西安市未央区长安大学",
+  	  	"tel": "13992459214",
+  	  	"default": false	
+  	  }
+  	]
+  }
+}

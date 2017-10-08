@@ -1,0 +1,173 @@
+{
+  "status": 1,
+  "result": {
+  	"totalMoney": 0,
+  	"list": [
+      {
+        "cakeId": "001",
+		"cakeName": "特制提拉米苏",
+		"cakeImg1": "../images/cake1_1.jpg",
+		"cakeImg2": "../images/cake1_2.jpg",
+		"cakeImg3": "../images/cake1_3.jpg",
+		"cakePrice": 68,
+		"cakeQuantity": 1,
+		"checked":false,
+		"cakeDesc": "特制提拉米苏蛋糕是一款非常经典的甜点，相传起源于意大利。每一层巧克力蛋糕都有口味独特的咖啡汁，特制的奶油慕丝散发着淡淡的乳酪香味，顶层以可可粉装饰而成。吃到嘴里香、滑、甜，柔和中带有质感的变化，那种温柔甜蜜的味道在口中肆意的洋溢。"
+	  },
+      {
+      	"cakeId": "002",
+		"cakeName": "黑森林",
+		"cakeImg1": "../images/cake2_1.jpg",
+		"cakeImg2": "../images/cake2_2.jpg",
+		"cakeImg3": "../images/cake2_3.jpg",
+		"cakePrice": 108,
+		"cakeQuantity": 1,
+		"checked":false,
+		"cakeDesc": "黑森林蛋糕是流行欧美的一款经典的蛋糕。巧克力的苦甜和维益奶油的香馥相得益彰，特别是夹层中黑樱桃的独特风味，使整款蛋糕于神秘中别有一番甜蜜风味，并用黑巧克力屑和红樱桃装饰而成。"
+      },
+      {
+      	"cakeId": "003",
+		"cakeName": "双色巧克力慕斯",
+		"cakeImg1": "../images/cake3_1.jpg",
+		"cakeImg2": "../images/cake3_2.jpg",
+		"cakeImg3": "../images/cake3_3.jpg",
+		"cakePrice": 99,
+		"cakeQuantity": 1,
+		"checked":false,
+		"cakeDesc": "巧克力作为传统经典的甜食，一直深受消费者的爱戴。这款双色巧克力慕斯蛋糕，口感细腻，回味香醇，白巧克力慕斯的甜与黑巧克力的苦配合得如此微妙，又如此美味，搭配松软的海绵蛋糕层，表面以巧克力酱拉丝装饰而成，给强烈的色彩反差赋予了韵味。"
+      },
+      {
+      	"cakeId": "004",
+		"cakeName": "芒果慕斯",
+		"cakeImg1": "../images/cake4_1.jpg",
+		"cakeImg2": "../images/cake4_2.jpg",
+		"cakeImg3": "../images/cake4_3.jpg",
+		"cakePrice": 98,
+		"cakeQuantity": 1,
+		"checked":false,
+		"cakeDesc": "这是一款充满热带风情的慕斯蛋糕。选用素有“热带国王”之称的芒果果泥，含有丰富的胡萝卜素。与巧克力口味松软蛋糕相得益彰，顶部再以细油滑以牛奶巧克力拉线装饰而成，尽享与众不同的口感体验，特别适合夏季食用。"
+      },
+      {
+      	"cakeId": "005",
+		"cakeName": "抹茶黄桃",
+		"cakeImg1": "../images/cake5_1.jpg",
+		"cakeImg2": "../images/cake5_2.jpg",
+		"cakeImg3": "../images/cake5_3.jpg",
+		"cakePrice": 107,
+		"cakeQuantity": 1,
+		"checked":false,
+		"cakeDesc": "抹茶黄桃蛋糕选用优质的原料，将中国的传统的抹茶口味和西式洋酒口味结合制作而成。抹茶蛋糕层和奶油馅料中都配上了白兰地和君度橙酒。带给您全新的味觉享受，中间的奶油馅中还加上了丰富的黄桃颗粒。表面中绵密的抹茶蛋糕屑覆盖，令口感香郁、柔顺。"
+      },
+      {
+      	"cakeId": "006",
+		"cakeName": "美式乳酪",
+		"cakeImg1": "../images/cake6_1.jpg",
+		"cakeImg2": "../images/cake6_2.jpg",
+		"cakeImg3": "../images/cake6_3.jpg",
+		"cakePrice": 108,
+		"cakeQuantity": 1,
+		"checked":false,
+		"cakeDesc": "精选优质原料，与原味乳酪蛋糕相比，不仅大大增加了乳酪、奶油和糖的比例，使之在口味上更加香浓醇厚，而且美式乳酪蛋糕采用了特殊的烘烤工艺，使产品的色泽也更加金黄诱人，让您体味纯正的美国风情。"
+      },
+      {
+      	"cakeId": "007",
+		"cakeName": "巧克力曲奇",
+		"cakeImg1": "../images/cake7_1.jpg",
+		"cakeImg2": "../images/cake7_2.jpg",
+		"cakeImg3": "../images/cake7_3.jpg",
+		"cakePrice": 108,
+		"cakeQuantity": 1,
+		"checked":false,
+		"cakeDesc": "精选香馥的巧克力和浓郁的奶油相结合制成的两层巧克力慕斯，加上两层可口的巧克力海绵蛋糕。顶部撒上口感脆爽、风味独特的巧克力奇脆，再配上牛奶巧克力拉线装饰而成。"
+      },
+      {
+      	"cakeId": "008",
+		"cakeName": "歌剧院",
+		"cakeImg1": "../images/cake8_1.jpg",
+		"cakeImg2": "../images/cake8_2.jpg",
+		"cakeImg3": "../images/cake8_3.jpg",
+		"cakePrice": 108,
+		"cakeQuantity": 1,
+		"checked":false,
+		"cakeDesc": "是一款经典欧式风格的甜点，每一片绵软的蛋糕上都喷上了精心调配的咖啡汁，搭配香味浓郁的巧克力夹馅，表面用纯正的巧克力甘纳西作为装饰，象征着歌剧院华丽绚烂的舞台。它将咖啡的香醇、奶油的香馥以及甘纳西的浓郁结合的恰到好处，让层层美味萦绕在舌尖。"
+      },
+      {
+      	"cakeId": "009",
+		"cakeName": "缤纷美莓慕斯",
+		"cakeImg1": "../images/cake9_1.jpg",
+		"cakeImg2": "../images/cake9_2.jpg",
+		"cakeImg3": "../images/cake9_3.jpg",
+		"cakePrice": 99,
+		"cakeQuantity": 1,
+		"checked":false,
+		"cakeDesc": "缤纷美莓慕斯蛋糕中融汇了草莓、覆盆子莓、黑莓、红加仑以及黑加仑，这五种果莓搭配绵软的蛋糕，味道清新爽口，特别适合夏季食用。"
+      },
+      {
+      	"cakeId": "010",
+		"cakeName": "白巧克力君度慕斯",
+		"cakeImg1": "../images/cake10_1.jpg",
+		"cakeImg2": "../images/cake10_2.jpg",
+		"cakeImg3": "../images/cake10_3.jpg",
+		"cakePrice": 108,
+		"cakeQuantity": 1,
+		"checked":false,
+		"cakeDesc": "具有丰富营养价值的蔓越莓切成丁，美味香滑的奶油与君度力娇酒结合，配上两层松软的原味海绵蛋糕。顶部撒上厚厚的一层白巧克力屑，再与一朵朵白色奶油花及颜色鲜艳的蔓越莓装饰而成，充满诱惑力。"
+      },
+      {
+      	"cakeId": "011",
+		"cakeName": "巧克力慕斯",
+		"cakeImg1": "../images/cake11_1.jpg",
+		"cakeImg2": "../images/cake11_2.jpg",
+		"cakeImg3": "../images/cake11_3.jpg",
+		"cakePrice": 99,
+		"cakeQuantity": 1,
+		"checked":false,
+		"cakeDesc": "这是一款经典的巧克力甜点。巧克力慕斯蛋糕以松脆的巧克力曲奇为底，再从上往下加上巧克力慕斯，巧克力蛋糕，牛奶巧克力慕斯三层结构，然后再表面淋上巧克力甘纳西，并且以白巧克力装饰。"
+      },
+      {
+      	"cakeId": "012",
+      	"cakeName": "提拉米苏乳酪",
+      	"cakeImg1": "../images/cake12_1.jpg",
+      	"cakeImg2": "../images/cake12_2.jpg",
+      	"cakeImg3": "../images/cake12_3.jpg",
+      	"cakePrice": 96,
+      	"cakeQuantity": 1,
+      	"checked":false,
+      	"cakeDesc": "这是一款经典的意大利甜品，双层浸透了香浓意大利咖啡酒的海绵蛋糕，搭配香滑浓郁的乳酪，顶部再以可可粉装饰而成。吃到嘴里香、滑、甜，柔中带有质感的变化，温柔甜蜜的而味道在口中肆意的舞动。"
+      },
+      {
+      	"cakeId": "013",
+      	"cakeName": "卡布基诺慕斯",
+      	"cakeImg1": "../images/cake13_1.jpg",
+      	"cakeImg2": "../images/cake13_2.jpg",
+      	"cakeImg3": "../images/cake13_3.jpg",
+      	"cakePrice": 108,
+      	"cakeQuantity": 1,
+      	"checked":false,
+      	"cakeDesc": "是意大利花式咖啡与慕斯蛋糕的奇妙结合。特制的浓郁慕斯层好比绵密的奶泡，与浸有咖啡汁的柔软蛋糕层层交汇，表面以可可粉装饰而成。它的香、甜、浓、苦各种滋味充分变现了意式的热情与浪漫特色，体现了风靡世界的卡布基诺咖啡的经典风味。"
+      },
+      {
+      	"cakeId": "014",
+      	"cakeName": "巧克力布朗尼",
+      	"cakeImg1": "../images/cake14_1.jpg",
+      	"cakeImg2": "../images/cake14_2.jpg",
+      	"cakeImg3": "../images/cake14_3.jpg",
+      	"cakePrice": 108,
+      	"cakeQuantity": 1,
+      	"checked":false,
+      	"cakeDesc": "作为一种传统甜点，一直深受美国家庭的追捧。蛋糕选用优质原料，使甜点具有丰盈的口感，浓郁的巧克力面糊包裹着香脆的核桃仁，经过精心烘焙而成，每一口品尝都充满浓的化不开的甜蜜感觉，让喜爱甜食的人爱不释手。"
+      },
+      {
+      	"cakeId": "015",
+		"cakeName": "栗子",
+		"cakeImg1": "../images/cake15_1.jpg",
+		"cakeImg2": "../images/cake15_2.jpg",
+		"cakeImg3": "../images/cake15_3.jpg",
+		"cakePrice": 108,
+		"cakeQuantity": 1,
+		"checked":false,
+		"cakeDesc": "选用优质的原材料制作而成，三层特制的慕斯层是由绵密香馥的奶油和甘甜酥糯的进口栗子酱拉线装饰而成，入口后紧紧缠着味蕾久久不散，是一款深受消费者喜爱的传统甜点。"
+      }
+  	]
+  }
+}
